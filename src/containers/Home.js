@@ -12,10 +12,18 @@ class Home extends Component {
     
   render () {
     return (
-      <div className="home">
-        <Sidebar />
-        <Menu />
-        <Map />
+      <div id="home">
+        
+        <div className="sidebar-menu">
+          <Sidebar />
+        </div>
+
+        <div className="main-content">
+          <Menu />
+          <Map />
+        </div>
+
+
       </div>
     )
   }
