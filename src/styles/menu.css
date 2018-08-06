@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------------------------------------------------------------------
+ * Menu Styles
+ ------------------------------------------------------------------------------------------------------------------------*/
+
+/* Icon Burguer Styles
+ * Modified example, retrieved from: https://www.w3schools.com/howto/howto_css_menu_icon.asp 
+ */
+
+.burguer-icon {
+    display: inline-block;
+    cursor: pointer;
+    padding: 9px;
+}
+
+.bar-one, .bar-two, .bar-three {
+    width: 35px;
+    height: 5px;
+    background: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar-one {
+    transform: rotate(-45deg) translate(-8px, 8px);
+    -webkit-transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.change .bar-two {
+    opacity: 0;
+}
+
+.change .bar-three {
+    transform: rotate(45deg) translate(-8px, -8px);
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+}

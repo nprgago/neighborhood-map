@@ -7,10 +7,20 @@ import '../styles/home.css'
 class Home extends Component {
   
   state = {
-    isLoading: true
+    isLoading: true,
+    isToggled: false,
   }  
-    
+  
+  toggle = () => {
+    this.setState( (state) => ({
+      isToggled: state.isToggled === true ? false : true
+    }))
+  }
+
   render () {
+    
+    const { isToggled } = this.state
+    
     return (
       <div id="home">
         
@@ -19,7 +29,10 @@ class Home extends Component {
         </div>
 
         <div className="main-content">
-          <Menu />
+          <Menu 
+            isToggled = { isToggled }
+            toggle = { this.toggle }
+          />
           <Map />
         </div>
 
