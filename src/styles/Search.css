@@ -1,11 +1,23 @@
 /* ------------------------------------------------------------------------------------------------------------------------
- * Slidebar Container Styles
+ * Search Component Styles
  ------------------------------------------------------------------------------------------------------------------------*/
 
-/* Search Container */
-.sidebar-title {
-    text-align: left;
-    padding: 15px 0;
-    margin: 0 0 0 30px;
+.search {
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
 }
 
+button, 
+input {
+    height: 40px;
+}
+
+.search-input {
+    width: 75%;
+}
+
+.search-filter {
+    width: 25%;
+}

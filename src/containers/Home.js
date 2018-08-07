@@ -25,22 +25,22 @@ class Home extends Component {
     const pushMain = isToggled ? 'main-content push' : 'main-content'
 
     return (
-      <div id="home">
+      <main id="home">
         
-        <div className={toggleSidebar}>
+        <section className={toggleSidebar}>
           <Sidebar />
-        </div>
+        </section>
 
-        <div className={pushMain}>
+        <section className={pushMain}>
           <Menu 
             isToggled = { isToggled }
             toggle = { this.toggle }
           />
           <Map />
-        </div>
+        </section>
 
 
-      </div>
+      </main>
     )
   }
 }
