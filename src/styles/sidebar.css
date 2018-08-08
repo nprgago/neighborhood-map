@@ -4,6 +4,8 @@
 
 /* Search Container */
 .sidebar-title {
+    min-width: 280px;
+    overflow-x: hidden;
     text-align: left;
     padding: 15px 0;
     margin: 0 0 0 30px;

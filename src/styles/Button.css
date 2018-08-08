@@ -4,6 +4,7 @@
 
  button {
     width: 100%;
+    min-width: 85px;
     font-size: 16px;
     font-weight: 700; 
     background: #3366ff;
