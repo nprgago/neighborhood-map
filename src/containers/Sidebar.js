@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import Search from './Search'
-import '../styles/sidebar.css'
+import '../styles/Sidebar.css'
 
 class Sidebar extends Component {
   

@@ -26,10 +26,10 @@
     background: #1a1a1a;
 }
 
-.map {
+.map-container {
     width: 100%;
-    height: calc(100% - 60px);
-    background: pink; 
+    height: calc(100vh - 60px);
+    background: white; 
 }
 
 .sidebar {

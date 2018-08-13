@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Sidebar from './Sidebar'
 import Menu from './Menu'
 import Map from './Map'
-import '../styles/home.css'
+import '../styles/Home.css'
 
 class Home extends Component {
   
@@ -19,7 +19,7 @@ class Home extends Component {
 
   render () {
     
-    const { isToggled } = this.state
+    const { isToggled, isLoading } = this.state
     
     const toggleSidebar = isToggled ? 'sidebar-menu open' : 'sidebar-menu'
     const pushMain = isToggled ? 'main-content push' : 'main-content'
@@ -36,9 +36,11 @@ class Home extends Component {
             isToggled = { isToggled }
             toggle = { this.toggle }
           />
-          <Map />
+          <Map 
+            isLoading = {isLoading}
+            loaded = {() => this.setState({ isLoading: false })}
+          />
         </section>
-
 
       </main>
     )
