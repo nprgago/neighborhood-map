@@ -1,0 +1,39 @@
+
+.mapboxgl-popup-close-button,
+.pop-title,
+.pop-description,
+.pop-website {
+    color: black;
+}
+
+.pop-container {    
+    margin: 40px 20px;
+    max-width: 250px;
+}
+
+.pop-title {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    margin-top: 40px;
+}
+
+.pop-description {
+    text-align: justify;
+}
+
+.pop-image {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto; 
+    border-radius: 50%;
+}
+
+.pop-website {
+    text-decoration: none;
+}
+
+.pop-website:hover {
+    text-decoration: underline;
+}

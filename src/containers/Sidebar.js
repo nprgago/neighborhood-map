@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Result from './../components/Result'
 import Search from './Search'
 import '../styles/Sidebar.css'
 
@@ -13,6 +14,7 @@ class Sidebar extends Component {
       <div className="sidebar">
         <h1 className="sidebar-title">Aveiro Locations</h1>
         <Search />
+        
       </div>
     )
   }
