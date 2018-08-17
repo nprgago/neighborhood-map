@@ -12,20 +12,20 @@ class Map extends Component {
   
   static propTypes = {
     isLoading : PropTypes.bool.isRequired,
-    loaded    : PropTypes.func.isRequired
+    loaded    : PropTypes.func.isRequired,
+    setMap    : PropTypes.func.isRequired
   }
 
   state = {
-    map     : '',
     lng     : inital.coordinates.lng,
     lat     : inital.coordinates.lat,
     zoom    : inital.zoom,
-    markers : []
   }
 
   componentDidMount() {
 
     const { lng, lat, zoom } = this.state
+    const { loaded, setMap } = this.props
     let poi = []
 
     const map = new mapboxgl.Map({
@@ -48,14 +48,16 @@ class Map extends Component {
         .setPopup(popUp)
         .addTo(map)
       
+      // Store object in marker for reuse later
+      marker.properties = object
+            
       // Push to array
       poi.push(marker)
     })
     
-    this.props.loaded()
-    this.setState({ map, markers : poi })
+    loaded()
+    setMap(map, poi)
   }
-
 
   addToMap = (marker) => marker.addTo(this.state.map)
   removeFromMap = (marker) => marker.remove()

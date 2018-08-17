@@ -8,16 +8,13 @@ import '../styles/Button.css'
 class Button extends Component {
   
   static propTypes = {
-    searching     : PropTypes.bool.isRequired,
-    applySearch   : PropTypes.func.isRequired
+    applySearch      : PropTypes.func.isRequired,
+    isSearching     : PropTypes.bool.isRequired
   }
   
   render () {
     
-    const { 
-      searching, 
-      applySearch
-    } = this.props
+    const { applySearch } = this.props
     
     return (
       <div className="search-filter">

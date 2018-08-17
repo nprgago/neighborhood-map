@@ -1,0 +1,14 @@
+.result {
+    padding: 20px 0;
+    line-height: 1.5;  
+    cursor: pointer;
+}
+
+.result-label {
+    padding-left: 30px;
+    color: #e6e6e6;
+}
+
+.result-label:hover {
+    text-decoration: underline;
+}

@@ -3,8 +3,8 @@
 export const inital = {
   token: 'pk.eyJ1IjoibnByZ2FnbyIsImEiOiJjams1aWRlYmQxanltM2xrY2FzMHd3dGF4In0.QnVlOExkTyGpbVgALUGUJg',
   coordinates: {
-    lat: -8.665,
-    lng: 40.636
+    lat: -8.642,
+    lng: 40.641
   },
   zoom: 13.6,
   style: 'mapbox://styles/nprgago/cjkssrgdh0ppt2rqixhegc3na'
@@ -27,6 +27,7 @@ export const popUps = {
 
 export const markers = [
   {
+    id: 1,
     title: "Sé de Aveiro",
     description:"A Sé de Aveiro situa-se no antigo convento dominicano, conhecido por ter sido a primeira comunidade religiosa a instalar-se na cidade. A igreja chama de imediato a atenção pela soberba fachada, com as suas imagens das Virtudes Humanas e a imponente torre sineira.",
     website:"http://www.paroquiagloria.org/ ",
@@ -37,6 +38,7 @@ export const markers = [
     }
   },
   {
+    id: 2,
     title: "Museu de Aveiro",
     description:"O Museu de Aveiro, popularmente conhecido como Museu Santa Joana, localiza-se na Avenida Santa Joana, perto da sé Catedral de Aveiro, no Concelho e distrito de Aveiro, em Portugal.",
     website:"http://www.patrimoniocultural.gov.pt/pt/museus-e-monumentos/rede-portuguesa/m/museu-de-aveiro/",
@@ -47,6 +49,7 @@ export const markers = [
     }
   },
   {
+    id: 3,
     title: "Parque Infante D. Pedro – Parque da Cidade",
     description:"O parque Infante D. Pedro, construído na antiga propriedade dos frades franciscanos, foi preparado a partir de 1862 na zona que pertencia ao Convento de Santo António. Aproveitou-se a ribeira que atravessava o parque para se desenvolver um espaço com lagos e fontes inserido no arvoredo envolvente.",
     website:"https://www.facebook.com/pages/Parque-Infante-D-Pedro/155451411188834",
@@ -57,6 +60,7 @@ export const markers = [
     }
   },
   {
+    id: 4,
     title: " Museu da Cidade de Aveiro",
     description:"Concebido num conceito de museu participativo, envolvendo diretamente a comunidade na construção dos conteúdos museológicos, pretende ilustrar os momentos, os factos e os protagonistas que, ao longo do tempo, têm dado alma à história de Aveiro.",
     website:"http://mca.cm-aveiro.pt/rede-de-museus/museu-da-cidade/",
@@ -67,6 +71,7 @@ export const markers = [
     }
   },
   {
+    id: 5,
     title: "Museu da Arte Nova",
     description:"O Museu Arte Nova de Aveiro, sedeado num dos imóveis mais emblemáticos entre o património desta corrente artística, é o centro interpretativo da extensa rede de motivos Arte Nova disseminados por toda a cidade de Aveiro.",
     website:"http://mca.cm-aveiro.pt/rede-de-museus/museu-arte-nova/",
@@ -77,6 +82,7 @@ export const markers = [
     }
   },
   {
+    id: 6,
     title: "Passadiços da Ria de Aveiro",
     description:"Inaugurados a 1 de Julho de 2018 com uma extensão de 7,5km no Municipio de Aveiro, esta Via Ecológica Ciclável liga o Canal de São Roque (no centro da Cidade) a Vilarinho (na margem sul do Rio Novo do Princípe, Cacia).",
     website:"http://www.cm-aveiro.pt/www/Templates/TONewDetail.aspx?id_object=47419&indexnew=1",
@@ -87,6 +93,7 @@ export const markers = [
     }
   },
   {
+    id: 7,
     title: "Universidade de Aveiro",
     description:"Criada em 1973, rapidamente se transformou numa das mais dinâmicas e inovadoras universidades do país. Frequentada por cerca de 15.000 alunos em programas de graduação e pós-graduação, a UA desde cedo assumiu um papel de relevância no panorama universitário do país.",
     website:"https://www.ua.pt",
@@ -97,6 +104,7 @@ export const markers = [
     }
   },
   {
+    id: 8,
     title: "Estação de Comboios de Aveiro",
     description:"A Estação Ferroviária de Aveiro é uma interface ferroviária da Linha do Norte, que funciona como entroncamento com o Ramal de Aveiro, e que serve a localidade de Aveiro, em Portugal.",
     website:"https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ferrovi%C3%A1ria_de_Aveiro",
@@ -107,6 +115,7 @@ export const markers = [
     }
   },
   {
+    id: 9,
     title: "Salinas de Aveiro",
     description:"As salinas de Aveiro são um dos pontos principais da história de Aveiro. Neste passeio poderá não só apreciar a beleza das Salinas, mas apreciar as aves que junto a elas habitam, apreciar a trabalho dos marnotos, apanhar salicórnia e contactar com os marnotos que ainda hoje se dedicam a esta atividade secular. ",
     website:"https://salinasaveiro.com/",
@@ -117,6 +126,7 @@ export const markers = [
     }
   },
   {
+    id: 10,
     title: "Cais da Ribeira de Esgueira",
     description:"Localizado em Vera Cruz, na periferia da cidade, este ainda é um lugar desconhecido, ideal para fotografar um belo nascer do sol ou pôr do sol, para andar de bicicleta ou fazer jogging. É um lugar dedicado à observação da Ria, sua fauna e flora.",
     website:"http://www.riadeaveiro.pt/diretorio/poi/cais-da-ribeira-de-esgueira/",

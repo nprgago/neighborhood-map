@@ -9,6 +9,8 @@ class Home extends Component {
   state = {
     isLoading: true,
     isToggled: false,
+    map: {},
+    markers: []
   }  
   
   toggle = () => {
@@ -19,7 +21,7 @@ class Home extends Component {
 
   render () {
     
-    const { isToggled, isLoading } = this.state
+    const { isToggled, isLoading, map, markers} = this.state
     
     const toggleSidebar = isToggled ? 'sidebar-menu open' : 'sidebar-menu'
     const pushMain = isToggled ? 'main-content push' : 'main-content'
@@ -28,7 +30,10 @@ class Home extends Component {
       <main id="home">
         
         <section className={toggleSidebar}>
-          <Sidebar />
+          <Sidebar 
+            map = {map}
+            markers = {markers}
+          />
         </section>
 
         <section className={pushMain}>
@@ -39,6 +44,7 @@ class Home extends Component {
           <Map 
             isLoading = {isLoading}
             loaded = {() => this.setState({ isLoading: false })}
+            setMap = {(map, markers) => this.setState({ map, markers })}
           />
         </section>
 
