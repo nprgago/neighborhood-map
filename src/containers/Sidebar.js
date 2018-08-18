@@ -15,8 +15,32 @@ class Sidebar extends Component {
   state = {
     searching: false,
     searchTerm: '',
+  }   
+  
+
+  togglePopUp = (marker) => marker.togglePopup()
+  removeFromMap = (marker) => marker.remove()
+  addToMap = (marker) => marker.addTo(this.props.map)
+
+  removeAllMarkers = (markers) => {
+    if (markers.length !== 0) {
+      for (let marker of markers) {
+        this.removeFromMap(marker)
+      }
+    }
   }
-   
+    
+  addMarkers = (markers, data) => {
+    markers.filter(marker => findTerm(marker.properties.title, data)).map(marker => {
+      this.addToMap(marker)
+    })
+  }
+
+  setTerm = (data, markers) => {
+    this.addMarkers(markers, data)
+    this.setState({ searchTerm: data })
+  }
+
   render () {
     
     const { searching, searchTerm } = this.state
@@ -26,7 +50,8 @@ class Sidebar extends Component {
       <div className="sidebar">
         <h1 className="sidebar-title">Aveiro Locations</h1>
         <Search 
-          setTerm = {(data) => this.setState({ searchTerm: data })}
+          setTerm = {(data) => this.setTerm(data, markers)}
+          removeAllMarkers = {() => this.removeAllMarkers(markers)}
           isSearching = {searching}
         />
         <div id="results">
@@ -35,11 +60,13 @@ class Sidebar extends Component {
               <Result 
                 key = {marker.properties.id}
                 title = {marker.properties.title}
+                togglePopUp = {() => this.togglePopUp(marker)}
               />
             ))) : (markers.map(marker => (
               <Result 
                 key = {marker.properties.id}
                 title = {marker.properties.title}
+                togglePopUp = {() => this.togglePopUp(marker)}
               />
             )))
           }

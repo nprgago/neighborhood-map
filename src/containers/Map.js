@@ -59,10 +59,6 @@ class Map extends Component {
     setMap(map, poi)
   }
 
-  addToMap = (marker) => marker.addTo(this.state.map)
-  removeFromMap = (marker) => marker.remove()
-  togglePopUp = (marker) => marker.togglePopup()
-
   render () {
 
     const { isLoading } = this.props

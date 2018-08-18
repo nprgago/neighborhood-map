@@ -22,7 +22,6 @@ class Home extends Component {
   render () {
     
     const { isToggled, isLoading, map, markers} = this.state
-    
     const toggleSidebar = isToggled ? 'sidebar-menu open' : 'sidebar-menu'
     const pushMain = isToggled ? 'main-content push' : 'main-content'
 

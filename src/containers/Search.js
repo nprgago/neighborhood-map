@@ -8,7 +8,8 @@ class Search extends Component {
   
   static proptypes = {
     setTerm: PropTypes.func.isRequired,
-    isSearching: PropTypes.bool.isRequired
+    isSearching: PropTypes.bool.isRequired,
+    removeAllMarkers: PropTypes.func.isRequired,
   }
 
   state = {
@@ -28,7 +29,7 @@ class Search extends Component {
   render () {
   
     const { query } = this.state
-    const { isSearching } = this.props
+    const { isSearching, removeAllMarkers, addMarkers } = this.props
     
     return (
       <div className="search">
@@ -38,6 +39,8 @@ class Search extends Component {
         />
         <Button 
           applySearch = {() => this.applySearch()}
+          removeAllMarkers = {() => removeAllMarkers()}
+          
           isSearching = {isSearching}
         />
       </div>   

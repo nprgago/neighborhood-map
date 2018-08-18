@@ -8,17 +8,21 @@ import '../styles/Button.css'
 class Button extends Component {
   
   static propTypes = {
-    applySearch      : PropTypes.func.isRequired,
-    isSearching     : PropTypes.bool.isRequired
+    applySearch       : PropTypes.func.isRequired,
+    isSearching       : PropTypes.bool.isRequired,
+    removeAllMarkers  : PropTypes.func.isRequired
   }
   
-  render () {
-    
-    const { applySearch } = this.props
+  click = () => {
+    this.props.removeAllMarkers()
+    this.props.applySearch()
+  }  
+  
+  render () {    
     
     return (
       <div className="search-filter">
-        <button onClick={applySearch}>
+        <button onClick={() => this.click()}>
           <FontAwesomeIcon icon = {faFilter} />
           Filter
         </button>
