@@ -20,3 +20,11 @@
     min-width: 280px;
     overflow-x: hidden;
 }
+
+.color {
+    z-index: 2;
+}
+
+.color svg g:nth-child(2) {
+    fill: #FF2400 !important;
+}

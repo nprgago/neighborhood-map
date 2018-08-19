@@ -18,10 +18,19 @@ class Sidebar extends Component {
   }   
   
 
-  togglePopUp = (marker) => marker.togglePopup()
+  togglePopUp = (marker) => {
+    // Toggle PopUp    
+    marker.togglePopup()
+    if (marker._popup.isOpen()) {
+      marker.getElement().classList.add('color')
+    } else {
+      marker.getElement().classList.remove('color')
+    }
+  }
+
   removeFromMap = (marker) => marker.remove()
   addToMap = (marker) => marker.addTo(this.props.map)
-
+  
   removeAllMarkers = (markers) => {
     if (markers.length !== 0) {
       for (let marker of markers) {

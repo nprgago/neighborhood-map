@@ -9,7 +9,7 @@ class Result extends Component {
     togglePopUp: PropTypes.func.isRequired,
     title: PropTypes.string.isRequired,
   }
-   
+     
   render() {
     
     const { togglePopUp, title } = this.props
