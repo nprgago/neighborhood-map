@@ -36,6 +36,10 @@ class Map extends Component {
       zoom: zoom
     })
 
+    map.on('load', () => {  
+      loaded()
+    })   
+
     markers.map( object => {
       
       // Creat Popup
@@ -75,18 +79,18 @@ class Map extends Component {
       poi.push(marker)
     })
     
-    loaded()
     setMap(map, poi)
   }
 
   render () {
 
     const { isLoading } = this.props
-    
+    const blur = isLoading ? {filter: 'blur(5px)'} : {filter: 'none'} 
+
     return (    
       <div className="map-container" role="application" >
         {isLoading && <Loading />}
-        <div id="map" ref={ el => this.mapContainer = el } />
+        <div id="map" style={blur} ref={ el => this.mapContainer = el } />
       </div>
     )
   }
