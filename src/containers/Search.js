@@ -8,7 +8,6 @@ class Search extends Component {
   
   static proptypes = {
     setTerm: PropTypes.func.isRequired,
-    isSearching: PropTypes.bool.isRequired,
     removeAllMarkers: PropTypes.func.isRequired,
   }
 
@@ -40,8 +39,6 @@ class Search extends Component {
         <Button 
           applySearch = {() => this.applySearch()}
           removeAllMarkers = {() => removeAllMarkers()}
-          
-          isSearching = {isSearching}
         />
       </div>   
     )

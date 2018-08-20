@@ -14,7 +14,6 @@ class Sidebar extends Component {
   }
 
   state = {
-    searching: false,
     searchTerm: '',
   }   
   
@@ -64,7 +63,6 @@ class Sidebar extends Component {
         <Search 
           setTerm = {(data) => this.setTerm(data, markers)}
           removeAllMarkers = {() => this.removeAllMarkers(markers)}
-          isSearching = {searching}
         />
         <div 
           id="results"

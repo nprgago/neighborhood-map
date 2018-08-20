@@ -9,7 +9,6 @@ class Button extends Component {
   
   static propTypes = {
     applySearch       : PropTypes.func.isRequired,
-    isSearching       : PropTypes.bool.isRequired,
     removeAllMarkers  : PropTypes.func.isRequired
   }
   
