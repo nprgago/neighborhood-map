@@ -32,6 +32,7 @@ class Home extends Component {
           <Sidebar 
             map = {map}
             markers = {markers}
+            toggleMenu = {() => this.toggle()}
           />
         </section>
 

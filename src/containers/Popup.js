@@ -9,5 +9,4 @@ export const Popup = (marker) => (`
     <a class = "pop-website" href=${marker.website} target="_blank">Visite o website</a>
   
   </div>
-
 `)

@@ -21,3 +21,8 @@ input {
 .search-filter {
     width: 25%;
 }
+
+@media screen and (max-width: 450px) {
+    .search-input { width: 65%; }
+    .search-filter { width: 35%; }
+}

@@ -8,8 +8,9 @@ import '../styles/Sidebar.css'
 class Sidebar extends Component {
   
   static proptypes = {
-    map     : PropTypes.object.isRequired,
-    markers : PropTypes.array.isRequired
+    map       : PropTypes.object.isRequired,
+    markers   : PropTypes.array.isRequired,
+    toggleMenu: PropTypes.func.isRequired
   }
 
   state = {
@@ -19,16 +20,19 @@ class Sidebar extends Component {
   
 
   togglePopUp = (marker) => {
-    // Toggle PopUp    
-    marker.togglePopup()
-    if (marker._popup.isOpen()) {
-      marker.getElement().classList.add('color')
-    } else {
-      marker.getElement().classList.remove('color')
-    }
+    marker.togglePopup() 
+
+    // Close previous openned popup
+    this.props.markers.map( obj => {
+      if (obj.properties.id !== marker.properties.id) {
+        if (obj._popup.isOpen())
+          obj.togglePopup()        
+      }
+    })  
   }
 
   removeFromMap = (marker) => marker.remove()
+  
   addToMap = (marker) => marker.addTo(this.props.map)
   
   removeAllMarkers = (markers) => {
@@ -53,7 +57,7 @@ class Sidebar extends Component {
   render () {
     
     const { searching, searchTerm } = this.state
-    const { markers } = this.props
+    const { markers, toggleMenu } = this.props
     
     return (
       <div className="sidebar">
@@ -70,12 +74,14 @@ class Sidebar extends Component {
                 key = {marker.properties.id}
                 title = {marker.properties.title}
                 togglePopUp = {() => this.togglePopUp(marker)}
+                toggleMenu = {() => toggleMenu()}
               />
             ))) : (markers.map(marker => (
               <Result 
                 key = {marker.properties.id}
                 title = {marker.properties.title}
                 togglePopUp = {() => this.togglePopUp(marker)}
+                toggleMenu = {() => toggleMenu()}
               />
             )))
           }

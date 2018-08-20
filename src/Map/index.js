@@ -86,7 +86,7 @@ export const markers = [
     title: "Passadiços da Ria de Aveiro",
     description:"Inaugurados a 1 de Julho de 2018 com uma extensão de 7,5km no Municipio de Aveiro, esta Via Ecológica Ciclável liga o Canal de São Roque (no centro da Cidade) a Vilarinho (na margem sul do Rio Novo do Princípe, Cacia).",
     website:"http://www.cm-aveiro.pt/www/Templates/TONewDetail.aspx?id_object=47419&indexnew=1",
-    src:"http://www.cm-aveiro.pt/www/output_efile.aspx?sid=89a3e384-90ba-49a8-8bf2-3fcfe9256780&cntx=dA5HbIYfIeU+al+geW0CA9Ea/v0BX3CdWjj+bR4uPv6hBODoLmle1KWRLCEZvGbt1o8q9EXP/9VMBgQmFgj1+A==&idf=55501",
+    src:"https://cdn.olhares.pt/client/files/foto/big/934/9343835.jpg",
     coordinates: {
       lat: 40.647482,
       lng: -8.650835

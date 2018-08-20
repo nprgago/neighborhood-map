@@ -47,10 +47,26 @@ class Map extends Component {
         .setLngLat([object.coordinates.lng, object.coordinates.lat])
         .setPopup(popUp)
         .addTo(map)
-      
-      // Store object in marker for reuse later
-      marker.properties = object
-            
+       
+        // Store object in marker for reuse later
+        marker.properties = object
+        
+        // Highlights Marker When Clicked
+        popUp.on('open', () => {
+          marker._element.classList.add('color')
+          // In mobile devices, fly to location 
+          if (window.innerWidth <= 500) {
+            map.flyTo({center: [
+              marker.properties.coordinates.lng,
+              marker.properties.coordinates.lat
+            ]})
+          }
+        })
+
+        popUp.on('close', () => {
+          marker._element.classList.remove('color')
+        })
+
       // Push to array
       poi.push(marker)
     })

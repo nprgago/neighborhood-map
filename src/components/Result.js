@@ -8,18 +8,27 @@ class Result extends Component {
   static proptypes = {
     togglePopUp: PropTypes.func.isRequired,
     title: PropTypes.string.isRequired,
+    toggleMenu : PropTypes.func.isRequired
   }
-     
+  
+  handleClick = () => {
+    this.props.togglePopUp()
+    
+    if (window.innerWidth <= 500) {
+      this.props.toggleMenu()
+    } 
+  }
+
   render() {
     
-    const { togglePopUp, title } = this.props
-    
+    const { title } = this.props
+        
     return (
       <div className="result">
         <MarkerIcon />
         <div 
           className="result-label"
-          onClick={() => togglePopUp()}
+          onClick={() => this.handleClick()}
         >{title}</div>
       </div>
     )

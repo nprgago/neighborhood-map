@@ -17,14 +17,10 @@
 
 #results {
     padding: 20px 20px;
-    min-width: 280px;
+    min-width: 200px;
     overflow-x: hidden;
 }
 
-.color {
-    z-index: 2;
-}
-
-.color svg g:nth-child(2) {
-    fill: #FF2400 !important;
+@media screen and (max-width: 450px) {
+    .sidebar-title { font-size: 20px; }
 }
