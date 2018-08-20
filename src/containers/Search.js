@@ -28,7 +28,7 @@ class Search extends Component {
   render () {
   
     const { query } = this.state
-    const { isSearching, removeAllMarkers, addMarkers } = this.props
+    const { removeAllMarkers } = this.props
     
     return (
       <div className="search" role="search">

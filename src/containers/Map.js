@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import mapboxgl from 'mapbox-gl'
 import { inital, markers, popUps } from '../Map'
 import {Popup} from './../containers/Popup'
+import Loading from './../components/Loading'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import '../styles/Map.css'
 
@@ -84,7 +85,7 @@ class Map extends Component {
     
     return (    
       <div className="map-container" role="application" >
-        {isLoading && <div>Loading Component</div>}
+        {isLoading && <Loading />}
         <div id="map" ref={ el => this.mapContainer = el } />
       </div>
     )

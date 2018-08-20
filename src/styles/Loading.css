@@ -1,0 +1,29 @@
+/*Adadpted from https://www.w3schools.com/howto/howto_css_loader.asp*/
+
+.loader {
+  border: 16px solid #ffffff; 
+  border-top: 16px solid #1a1a1a; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: fixed;
+  z-index: 99;
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  filter: blur(5px);
+  z-index: 98;
+  opacity: 0.2;
+}
