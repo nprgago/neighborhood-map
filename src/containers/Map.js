@@ -59,7 +59,10 @@ class Map extends Component {
             map.flyTo({center: [
               marker.properties.coordinates.lng,
               marker.properties.coordinates.lat
-            ]})
+            ],
+            zoom: this.state.zoom,
+            speed: 0.5
+          })
           }
         })
 
