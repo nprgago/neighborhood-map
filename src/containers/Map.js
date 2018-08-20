@@ -83,7 +83,7 @@ class Map extends Component {
     const { isLoading } = this.props
     
     return (    
-      <div className="map-container">
+      <div className="map-container" role="application" >
         {isLoading && <div>Loading Component</div>}
         <div id="map" ref={ el => this.mapContainer = el } />
       </div>

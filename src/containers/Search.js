@@ -32,7 +32,7 @@ class Search extends Component {
     const { isSearching, removeAllMarkers, addMarkers } = this.props
     
     return (
-      <div className="search">
+      <div className="search" role="search">
         <Input 
           query         = {query}
           handleChange  = {this.handleChange}

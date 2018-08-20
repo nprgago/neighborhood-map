@@ -15,7 +15,10 @@ class Menu extends Component {
     const animation = isToggled ? 'change' : ''
 
     return (
-      <div className="menu">
+      <div 
+        className="menu"
+        tabIndex='0'
+      >
         <div className={`burguer-icon ${animation}`} onClick={toggle}>
           <div className="bar-one"></div>
           <div className="bar-two"></div>

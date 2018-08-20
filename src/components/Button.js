@@ -22,7 +22,11 @@ class Button extends Component {
     
     return (
       <div className="search-filter">
-        <button onClick={() => this.click()}>
+        <button 
+          type = "button"
+          onClick={() => this.click()}
+          tabIndex="3"
+        >
           <FontAwesomeIcon icon = {faFilter} />
           Filter
         </button>

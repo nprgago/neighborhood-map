@@ -23,6 +23,9 @@ class Input extends Component {
           value = { query }
           onChange = {handleChange}
           placeholder = {`Station Location`}
+          type= "text"
+          aria-label="What's the desirable Aveiro Location?"
+          tabIndex='2'
         />
       </div>   
     )

@@ -66,7 +66,12 @@ class Sidebar extends Component {
           removeAllMarkers = {() => this.removeAllMarkers(markers)}
           isSearching = {searching}
         />
-        <div id="results">
+        <div 
+          id="results"
+          tabIndex= "1"
+          role="listbox"
+          aria-label="location results"
+        >
           {searchTerm !== '' 
             ? (markers.filter(marker => findTerm(marker.properties.title, searchTerm)).map(marker => (
               <Result 
