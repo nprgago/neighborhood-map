@@ -50,7 +50,7 @@ export const markers = [
   },
   {
     id: 3,
-    title: "Parque Infante D. Pedro – Parque da Cidade",
+    title: "Parque Infante D. Pedro",
     description:"O parque Infante D. Pedro, construído na antiga propriedade dos frades franciscanos, foi preparado a partir de 1862 na zona que pertencia ao Convento de Santo António. Aproveitou-se a ribeira que atravessava o parque para se desenvolver um espaço com lagos e fontes inserido no arvoredo envolvente.",
     website:"https://www.facebook.com/pages/Parque-Infante-D-Pedro/155451411188834",
     src:"http://media.rotabairrada.grupoma.eu/irt/1521/Parque%20D.%20Pedro%20V%20-%20Casa%20de%20Ch%C3%A1.jpg",
@@ -83,7 +83,7 @@ export const markers = [
   },
   {
     id: 6,
-    title: "Passadiços da Ria de Aveiro",
+    title: "Passadiços da Ria",
     description:"Inaugurados a 1 de Julho de 2018 com uma extensão de 7,5km no Municipio de Aveiro, esta Via Ecológica Ciclável liga o Canal de São Roque (no centro da Cidade) a Vilarinho (na margem sul do Rio Novo do Princípe, Cacia).",
     website:"http://www.cm-aveiro.pt/www/Templates/TONewDetail.aspx?id_object=47419&indexnew=1",
     src:"https://cdn.olhares.pt/client/files/foto/big/934/9343835.jpg",
@@ -105,7 +105,7 @@ export const markers = [
   },
   {
     id: 8,
-    title: "Estação de Comboios de Aveiro",
+    title: "Estação de Comboios",
     description:"A Estação Ferroviária de Aveiro é uma interface ferroviária da Linha do Norte, que funciona como entroncamento com o Ramal de Aveiro, e que serve a localidade de Aveiro, em Portugal.",
     website:"https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ferrovi%C3%A1ria_de_Aveiro",
     src:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Old_station_of_Aveiro.jpg/1200px-Old_station_of_Aveiro.jpg",

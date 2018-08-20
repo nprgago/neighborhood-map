@@ -2,10 +2,10 @@
     padding: 10px 0;
     line-height: 1.5;  
     cursor: pointer;
+    display: flex;
 }
 
 .result-label {
-    padding-left: 30px;
     color: #e6e6e6;
 }
 

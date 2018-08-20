@@ -18,7 +18,6 @@ class Sidebar extends Component {
     searchTerm: '',
   }   
   
-
   togglePopUp = (marker) => {
     marker.togglePopup() 
 
