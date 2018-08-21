@@ -28,7 +28,7 @@ class Home extends Component {
     return (
       <main id="home">
         
-        <section role="contentinfo" aria-label="Aveiro Location Search" className={toggleSidebar}>
+        <section aria-label="Aveiro Location Search" className={toggleSidebar}>
           <Sidebar 
             map = {map}
             markers = {markers}
@@ -36,7 +36,7 @@ class Home extends Component {
           />
         </section>
 
-        <section role="region" aria-label="map content" className={pushMain}>
+        <section aria-label="map content" className={pushMain}>
           <Menu 
             isToggled = { isToggled }
             toggle = { this.toggle }

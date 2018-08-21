@@ -40,21 +40,20 @@ class Map extends Component {
       loaded()
     })   
 
-    markers.map( object => {
-      
+    for (let obj of markers) {
       // Creat Popup
       let popUp = new mapboxgl.Popup(popUps)
-        .setLngLat([object.coordinates.lng, object.coordinates.lat])
-        .setHTML(Popup(object))
+        .setLngLat([obj.coordinates.lng, obj.coordinates.lat])
+        .setHTML(Popup(obj))
       
       // Create Markers
       let marker = new mapboxgl.Marker()
-        .setLngLat([object.coordinates.lng, object.coordinates.lat])
+        .setLngLat([obj.coordinates.lng, obj.coordinates.lat])
         .setPopup(popUp)
         .addTo(map)
        
         // Store object in marker for reuse later
-        marker.properties = object
+        marker.properties = obj
         
         // Highlights Marker When Clicked
         popUp.on('open', () => {
@@ -70,15 +69,15 @@ class Map extends Component {
           })
           }
         })
-
+  
         popUp.on('close', () => {
           marker._element.classList.remove('color')
         })
-
+  
       // Push to array
       poi.push(marker)
-    })
-    
+    }
+
     setMap(map, poi)
   }
 

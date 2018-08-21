@@ -19,14 +19,13 @@ class Sidebar extends Component {
   
   togglePopUp = (marker) => {
     marker.togglePopup() 
-
     // Close previous openned popup
-    this.props.markers.map( obj => {
+    for (let obj of this.props.markers ) {
       if (obj.properties.id !== marker.properties.id) {
         if (obj._popup.isOpen())
           obj.togglePopup()        
       }
-    })  
+    } 
   }
 
   removeFromMap = (marker) => marker.remove()
@@ -54,7 +53,7 @@ class Sidebar extends Component {
 
   render () {
     
-    const { searching, searchTerm } = this.state
+    const { searchTerm } = this.state
     const { markers, toggleMenu } = this.props
     
     return (
